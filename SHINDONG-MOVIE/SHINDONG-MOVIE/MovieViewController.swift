@@ -50,7 +50,7 @@ class MovieViewController: UIViewController {
             previewBtnArray[i].tag = 1000 + i
             previewBtnArray[i].isUserInteractionEnabled = true
             previewBtnArray[i].addGestureRecognizer(UITapGestureRecognizer(target:self, action: #selector(self.previewImageClicked)))
-            print(previewBtnArray[i].tag)
+            //print(previewBtnArray[i].tag)
             
         }
     }
