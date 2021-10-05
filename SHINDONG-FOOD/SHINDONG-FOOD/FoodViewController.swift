@@ -9,9 +9,6 @@ import UIKit
 
 class FoodViewController: UIViewController {
     
-    @IBOutlet var collectionView: UICollectionView!
-    let imageArray: [String] = ["cake","churros","doughnut",]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
