@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B59CE80270B387F007DA564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B59CE7F270B387F007DA564 /* AppDelegate.swift */; };
-		0B59CE82270B387F007DA564 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B59CE81270B387F007DA564 /* SceneDelegate.swift */; };
-		0B59CE84270B387F007DA564 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B59CE83270B387F007DA564 /* ViewController.swift */; };
-		0B59CE87270B387F007DA564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B59CE85270B387F007DA564 /* Main.storyboard */; };
-		0B59CE89270B3880007DA564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B59CE88270B3880007DA564 /* Assets.xcassets */; };
-		0B59CE8C270B3880007DA564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B59CE8A270B3880007DA564 /* LaunchScreen.storyboard */; };
-		0B59CE96270B3B0F007DA564 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B59CE95270B3B0F007DA564 /* MovieViewController.swift */; };
+		0B6216FB270EB04500B94523 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6216FA270EB04500B94523 /* AppDelegate.swift */; };
+		0B6216FD270EB04500B94523 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6216FC270EB04500B94523 /* SceneDelegate.swift */; };
+		0B6216FF270EB04500B94523 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6216FE270EB04500B94523 /* ViewController.swift */; };
+		0B621702270EB04500B94523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B621700270EB04500B94523 /* Main.storyboard */; };
+		0B621704270EB04600B94523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B621703270EB04600B94523 /* Assets.xcassets */; };
+		0B621707270EB04600B94523 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B621705270EB04600B94523 /* LaunchScreen.storyboard */; };
+		0B62170F270EB1EC00B94523 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62170E270EB1EC00B94523 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B59CE7C270B387F007DA564 /* SHINDONG-MOVIE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SHINDONG-MOVIE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B59CE7F270B387F007DA564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B59CE81270B387F007DA564 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B59CE83270B387F007DA564 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0B59CE86270B387F007DA564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0B59CE88270B3880007DA564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0B59CE8B270B3880007DA564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0B59CE8D270B3880007DA564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B59CE95270B3B0F007DA564 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		0B6216F7270EB04500B94523 /* NewWordSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewWordSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B6216FA270EB04500B94523 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0B6216FC270EB04500B94523 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0B6216FE270EB04500B94523 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B621701270EB04500B94523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0B621703270EB04600B94523 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B621706270EB04600B94523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0B621708270EB04600B94523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B62170E270EB1EC00B94523 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0B59CE79270B387F007DA564 /* Frameworks */ = {
+		0B6216F4270EB04500B94523 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,73 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B59CE73270B387F007DA564 = {
+		0B6216EE270EB04500B94523 = {
 			isa = PBXGroup;
 			children = (
-				0B59CE7E270B387F007DA564 /* SHINDONG-MOVIE */,
-				0B59CE7D270B387F007DA564 /* Products */,
+				0B6216F9270EB04500B94523 /* NewWordSearch */,
+				0B6216F8270EB04500B94523 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0B59CE7D270B387F007DA564 /* Products */ = {
+		0B6216F8270EB04500B94523 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B59CE7C270B387F007DA564 /* SHINDONG-MOVIE.app */,
+				0B6216F7270EB04500B94523 /* NewWordSearch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0B59CE7E270B387F007DA564 /* SHINDONG-MOVIE */ = {
+		0B6216F9270EB04500B94523 /* NewWordSearch */ = {
 			isa = PBXGroup;
 			children = (
-				0B59CE7F270B387F007DA564 /* AppDelegate.swift */,
-				0B59CE81270B387F007DA564 /* SceneDelegate.swift */,
-				0B59CE83270B387F007DA564 /* ViewController.swift */,
-				0B59CE85270B387F007DA564 /* Main.storyboard */,
-				0B59CE95270B3B0F007DA564 /* MovieViewController.swift */,
-				0B59CE88270B3880007DA564 /* Assets.xcassets */,
-				0B59CE8A270B3880007DA564 /* LaunchScreen.storyboard */,
-				0B59CE8D270B3880007DA564 /* Info.plist */,
+				0B6216FA270EB04500B94523 /* AppDelegate.swift */,
+				0B6216FC270EB04500B94523 /* SceneDelegate.swift */,
+				0B6216FE270EB04500B94523 /* ViewController.swift */,
+				0B621700270EB04500B94523 /* Main.storyboard */,
+				0B62170E270EB1EC00B94523 /* SearchViewController.swift */,
+				0B621703270EB04600B94523 /* Assets.xcassets */,
+				0B621705270EB04600B94523 /* LaunchScreen.storyboard */,
+				0B621708270EB04600B94523 /* Info.plist */,
 			);
-			path = "SHINDONG-MOVIE";
+			path = NewWordSearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B59CE7B270B387F007DA564 /* SHINDONG-MOVIE */ = {
+		0B6216F6270EB04500B94523 /* NewWordSearch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B59CE90270B3880007DA564 /* Build configuration list for PBXNativeTarget "SHINDONG-MOVIE" */;
+			buildConfigurationList = 0B62170B270EB04600B94523 /* Build configuration list for PBXNativeTarget "NewWordSearch" */;
 			buildPhases = (
-				0B59CE78270B387F007DA564 /* Sources */,
-				0B59CE79270B387F007DA564 /* Frameworks */,
-				0B59CE7A270B387F007DA564 /* Resources */,
+				0B6216F3270EB04500B94523 /* Sources */,
+				0B6216F4270EB04500B94523 /* Frameworks */,
+				0B6216F5270EB04500B94523 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "SHINDONG-MOVIE";
-			productName = "SHINDONG-MOVIE";
-			productReference = 0B59CE7C270B387F007DA564 /* SHINDONG-MOVIE.app */;
+			name = NewWordSearch;
+			productName = NewWordSearch;
+			productReference = 0B6216F7270EB04500B94523 /* NewWordSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0B59CE74270B387F007DA564 /* Project object */ = {
+		0B6216EF270EB04500B94523 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					0B59CE7B270B387F007DA564 = {
+					0B6216F6270EB04500B94523 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = 0B59CE77270B387F007DA564 /* Build configuration list for PBXProject "SHINDONG-MOVIE" */;
+			buildConfigurationList = 0B6216F2270EB04500B94523 /* Build configuration list for PBXProject "NewWordSearch" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,56 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 0B59CE73270B387F007DA564;
-			productRefGroup = 0B59CE7D270B387F007DA564 /* Products */;
+			mainGroup = 0B6216EE270EB04500B94523;
+			productRefGroup = 0B6216F8270EB04500B94523 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B59CE7B270B387F007DA564 /* SHINDONG-MOVIE */,
+				0B6216F6270EB04500B94523 /* NewWordSearch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0B59CE7A270B387F007DA564 /* Resources */ = {
+		0B6216F5270EB04500B94523 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B59CE8C270B3880007DA564 /* LaunchScreen.storyboard in Resources */,
-				0B59CE89270B3880007DA564 /* Assets.xcassets in Resources */,
-				0B59CE87270B387F007DA564 /* Main.storyboard in Resources */,
+				0B621707270EB04600B94523 /* LaunchScreen.storyboard in Resources */,
+				0B621704270EB04600B94523 /* Assets.xcassets in Resources */,
+				0B621702270EB04500B94523 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0B59CE78270B387F007DA564 /* Sources */ = {
+		0B6216F3270EB04500B94523 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B59CE84270B387F007DA564 /* ViewController.swift in Sources */,
-				0B59CE80270B387F007DA564 /* AppDelegate.swift in Sources */,
-				0B59CE82270B387F007DA564 /* SceneDelegate.swift in Sources */,
-				0B59CE96270B3B0F007DA564 /* MovieViewController.swift in Sources */,
+				0B6216FF270EB04500B94523 /* ViewController.swift in Sources */,
+				0B6216FB270EB04500B94523 /* AppDelegate.swift in Sources */,
+				0B62170F270EB1EC00B94523 /* SearchViewController.swift in Sources */,
+				0B6216FD270EB04500B94523 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0B59CE85270B387F007DA564 /* Main.storyboard */ = {
+		0B621700270EB04500B94523 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0B59CE86270B387F007DA564 /* Base */,
+				0B621701270EB04500B94523 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		0B59CE8A270B3880007DA564 /* LaunchScreen.storyboard */ = {
+		0B621705270EB04600B94523 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0B59CE8B270B3880007DA564 /* Base */,
+				0B621706270EB04600B94523 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0B59CE8E270B3880007DA564 /* Debug */ = {
+		0B621709270EB04600B94523 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -221,7 +221,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -231,7 +231,7 @@
 			};
 			name = Debug;
 		};
-		0B59CE8F270B3880007DA564 /* Release */ = {
+		0B62170A270EB04600B94523 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -276,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -286,16 +286,15 @@
 			};
 			name = Release;
 		};
-		0B59CE91270B3880007DA564 /* Debug */ = {
+		0B62170C270EB04600B94523 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2PC84U64N2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SHINDONG-MOVIE/Info.plist";
+				INFOPLIST_FILE = NewWordSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -307,7 +306,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shindong.SHINDONG-MOVIE";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shindong.NewWordSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -315,16 +314,15 @@
 			};
 			name = Debug;
 		};
-		0B59CE92270B3880007DA564 /* Release */ = {
+		0B62170D270EB04600B94523 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2PC84U64N2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SHINDONG-MOVIE/Info.plist";
+				INFOPLIST_FILE = NewWordSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -336,7 +334,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shindong.SHINDONG-MOVIE";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shindong.NewWordSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -347,25 +345,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B59CE77270B387F007DA564 /* Build configuration list for PBXProject "SHINDONG-MOVIE" */ = {
+		0B6216F2270EB04500B94523 /* Build configuration list for PBXProject "NewWordSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B59CE8E270B3880007DA564 /* Debug */,
-				0B59CE8F270B3880007DA564 /* Release */,
+				0B621709270EB04600B94523 /* Debug */,
+				0B62170A270EB04600B94523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B59CE90270B3880007DA564 /* Build configuration list for PBXNativeTarget "SHINDONG-MOVIE" */ = {
+		0B62170B270EB04600B94523 /* Build configuration list for PBXNativeTarget "NewWordSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B59CE91270B3880007DA564 /* Debug */,
-				0B59CE92270B3880007DA564 /* Release */,
+				0B62170C270EB04600B94523 /* Debug */,
+				0B62170D270EB04600B94523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0B59CE74270B387F007DA564 /* Project object */;
+	rootObject = 0B6216EF270EB04500B94523 /* Project object */;
 }
