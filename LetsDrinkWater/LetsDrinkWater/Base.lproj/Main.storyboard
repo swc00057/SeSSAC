@@ -150,6 +150,7 @@
                         <outlet property="labelView" destination="YMc-LC-fLV" id="UtL-7n-vuS"/>
                         <outlet property="literText" destination="fHw-bU-NoS" id="Hb0-W6-g6I"/>
                         <outlet property="middleLabel" destination="1CO-4c-JL2" id="79u-ig-ZQ2"/>
+                        <outlet property="naviBar" destination="BGs-ZE-xav" id="F0p-Lq-U3G"/>
                         <outlet property="statusImage" destination="0jt-xf-PU7" id="DaZ-rZ-AJd"/>
                         <outlet property="topLabel" destination="Khk-gg-M5j" id="xGR-zn-uCN"/>
                     </connections>
@@ -288,6 +289,7 @@
                         <outlet property="heightTextField" destination="VNH-cz-nH7" id="di4-JL-rQ6"/>
                         <outlet property="nickTextField" destination="Kaj-CG-8qT" id="RpI-Yr-a3s"/>
                         <outlet property="userInfoSaveBtn" destination="9fE-aA-T9n" id="9Uz-fM-z07"/>
+                        <outlet property="userNavibar" destination="Wmp-Xv-uh8" id="PwU-Wt-IxP"/>
                         <outlet property="weightTextField" destination="xGG-Ds-N7K" id="uYS-Gx-aaM"/>
                     </connections>
                 </viewController>

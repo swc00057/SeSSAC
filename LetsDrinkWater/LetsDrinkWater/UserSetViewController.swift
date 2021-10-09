@@ -15,9 +15,14 @@ class UserSetViewController: UIViewController {
     @IBOutlet var heightTextField: HoshiTextField!
     @IBOutlet var weightTextField: HoshiTextField!
     @IBOutlet var userInfoSaveBtn: UIBarButtonItem!
-    
+    @IBOutlet var userNavibar: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+        nickTextField.placeholder = "닉네임을 입력해주세요"
+        weightTextField.placeholder = "키cm을 설정해주세요"
+        heightTextField.placeholder = "몸무게(kg)를 설정해주세요"
+        userInfoSaveBtn.title = "저장"
+        userNavibar.title = "사용자 설정"
         self.view.backgroundColor = UIColor.init(named: "bgcolor")
         self.navigationController?.navigationBar.tintColor = .white
         

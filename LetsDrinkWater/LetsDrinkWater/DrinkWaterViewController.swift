@@ -16,8 +16,10 @@ class DrinkWaterViewController: UIViewController {
     @IBOutlet var topLabel: UILabel!
     @IBOutlet var literText: UITextField!
     @IBOutlet var statusImage: UIImageView!
+    @IBOutlet var naviBar: UINavigationItem!
     var sumOfwater: Int = 0
     var userWeight: Int = 0
+    var userHeight: Int = 0
     let imageArray: [String] = ["1-1","1-2","1-3","1-4","1-5","1-6","1-7","1-8","1-9"]
     
     override func viewDidLoad() {
@@ -29,15 +31,25 @@ class DrinkWaterViewController: UIViewController {
         super.viewWillAppear(animated)
         sumOfwater = UserDefaults.standard.integer(forKey: "sumOfwater")
         userWeight = UserDefaults.standard.integer(forKey: "userWeight")
+        userHeight = UserDefaults.standard.integer(forKey: "userHeight")
         calculate()
     }
     
     func setup(){
+        //네비게이션 타이틀
+        naviBar.title = "물 마시자"
         //배경색
         self.view.backgroundColor = UIColor.init(named: "bgcolor")
         labelView.backgroundColor = .clear
         drinkBtn.backgroundColor = .systemYellow
         literText.backgroundColor = .clear
+        
+        //버튼 텍스트
+        drinkBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        drinkBtn.titleLabel?.text = "물 마시기!!"
+        
+        //placeholder
+        literText.placeholder = "마신 물??"
         
         //먹은 물의 양을 입력하는 텍스트필드
         literText.borderStyle = .none
@@ -65,12 +77,12 @@ class DrinkWaterViewController: UIViewController {
         var recommendedAmount: Int
         var target: Double
         //예외처리 - 저장된 값이 없을 시 권장량 2000
-        if userWeight == 0 {
+        if userWeight + userHeight == 0 {
             recommendedAmount = 2000
         }
-        //권장량 계산
+        //권장량 계산(ml)
         else{
-            recommendedAmount = userWeight * 30
+            recommendedAmount = (userWeight + userHeight) * 10
         }
         //예외처리 - 0을 x로 나누는 것이 불가능 함 따라서 저장된 값이 없을 시 목표치 0
         if sumOfwater == 0 {
