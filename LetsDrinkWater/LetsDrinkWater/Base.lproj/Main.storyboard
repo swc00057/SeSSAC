@@ -53,6 +53,9 @@
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldExit:" destination="4sE-im-Xlh" eventType="editingDidEndOnExit" id="fB1-fy-x2H"/>
+                                </connections>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1-1" translatesAutoresizingMaskIntoConstraints="NO" id="0jt-xf-PU7">
                                 <rect key="frame" x="20" y="262" width="350" height="262"/>
@@ -147,6 +150,7 @@
                         <outlet property="labelView" destination="YMc-LC-fLV" id="UtL-7n-vuS"/>
                         <outlet property="literText" destination="fHw-bU-NoS" id="Hb0-W6-g6I"/>
                         <outlet property="middleLabel" destination="1CO-4c-JL2" id="79u-ig-ZQ2"/>
+                        <outlet property="statusImage" destination="0jt-xf-PU7" id="DaZ-rZ-AJd"/>
                         <outlet property="topLabel" destination="Khk-gg-M5j" id="xGR-zn-uCN"/>
                     </connections>
                 </viewController>
@@ -162,7 +166,6 @@
         <!--사용자설정-->
         <scene sceneID="u1f-SM-kC4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uye-YS-tk0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="IbJ-7j-bZ0" customClass="UserSetViewController" customModule="LetsDrinkWater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xYq-yb-50P">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
@@ -181,7 +184,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -196,6 +199,9 @@
                                         <real key="value" value="0.80000000000000004"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldExit:" destination="IbJ-7j-bZ0" eventType="editingDidEndOnExit" id="NTw-V8-0OP"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="키(cm)을 설정해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNH-cz-nH7" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="30" y="410" width="330" height="50"/>
@@ -204,7 +210,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -219,6 +225,9 @@
                                         <real key="value" value="0.80000000000000004"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldExit:" destination="IbJ-7j-bZ0" eventType="editingDidEndOnExit" id="Awu-tL-eGe"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="몸무게(kg)을 설정해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xGG-Ds-N7K" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="30" y="480" width="330" height="50"/>
@@ -227,7 +236,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -242,10 +251,14 @@
                                         <real key="value" value="0.80000000000000004"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldExit:" destination="IbJ-7j-bZ0" eventType="editingDidEndOnExit" id="hYD-Ba-JlG"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gOI-8I-RuU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="glO-cy-eRV" firstAttribute="top" secondItem="gOI-8I-RuU" secondAttribute="top" constant="20" id="1Zx-en-XQU"/>
                             <constraint firstItem="gOI-8I-RuU" firstAttribute="trailing" secondItem="VNH-cz-nH7" secondAttribute="trailing" constant="30" id="2T6-0Q-i64"/>
@@ -260,16 +273,30 @@
                             <constraint firstItem="xGG-Ds-N7K" firstAttribute="top" secondItem="VNH-cz-nH7" secondAttribute="bottom" constant="20" id="qmr-mP-TzV"/>
                             <constraint firstItem="gOI-8I-RuU" firstAttribute="trailing" secondItem="xGG-Ds-N7K" secondAttribute="trailing" constant="30" id="sgB-Ev-LOX"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Yqe-dc-BH3" appends="YES" id="dUF-IU-3xG"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="사용자설정" id="Wmp-Xv-uh8">
-                        <barButtonItem key="rightBarButtonItem" title="저장" id="9fE-aA-T9n"/>
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="9fE-aA-T9n">
+                            <connections>
+                                <action selector="UserInfoSave:" destination="IbJ-7j-bZ0" id="nv7-a0-wIi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="heightTextField" destination="VNH-cz-nH7" id="di4-JL-rQ6"/>
                         <outlet property="nickTextField" destination="Kaj-CG-8qT" id="RpI-Yr-a3s"/>
+                        <outlet property="userInfoSaveBtn" destination="9fE-aA-T9n" id="9Uz-fM-z07"/>
                         <outlet property="weightTextField" destination="xGG-Ds-N7K" id="uYS-Gx-aaM"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uye-YS-tk0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Yqe-dc-BH3">
+                    <connections>
+                        <action selector="tapGesture:" destination="IbJ-7j-bZ0" id="lqq-1z-Lxz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1537.68115942029" y="-174.10714285714286"/>
         </scene>
@@ -308,6 +335,20 @@
             <point key="canvasLocation" x="-121.73913043478262" y="-174.10714285714286"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Kaj-CG-8qT">
+            <size key="intrinsicContentSize" width="178" height="25.666666666666668"/>
+        </designable>
+        <designable name="VNH-cz-nH7">
+            <size key="intrinsicContentSize" width="184" height="25.666666666666668"/>
+        </designable>
+        <designable name="fHw-bU-NoS">
+            <size key="intrinsicContentSize" width="55.333333333333336" height="26.666666666666668"/>
+        </designable>
+        <designable name="xGG-Ds-N7K">
+            <size key="intrinsicContentSize" width="213" height="25.666666666666668"/>
+        </designable>
+    </designables>
     <resources>
         <image name="1-1" width="152" height="151"/>
         <image name="1-9" width="152" height="151"/>
