@@ -104,5 +104,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         navigationController?.pushViewController(vc, animated: true)
     }
+    @IBAction func mapButtonClicked(_ sender: UIBarButtonItem) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = sb.instantiateViewController(withIdentifier: MapViewController.identifier) as! MapViewController
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 

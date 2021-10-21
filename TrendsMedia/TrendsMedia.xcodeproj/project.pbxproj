@@ -24,6 +24,9 @@
 		0BA2E57A27214AF600AF5E46 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2E57927214AF600AF5E46 /* BookViewController.swift */; };
 		0BA2E57D27214BE100AF5E46 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2E57B27214BE100AF5E46 /* BookCollectionViewCell.swift */; };
 		0BA2E57E27214BE100AF5E46 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA2E57C27214BE100AF5E46 /* BookCollectionViewCell.xib */; };
+		0BA2E58027215E9A00AF5E46 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2E57F27215E9A00AF5E46 /* MapViewController.swift */; };
+		0BA2E582272169FF00AF5E46 /* TheaterLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2E581272169FF00AF5E46 /* TheaterLocation.swift */; };
+		0BA2E58427216A8500AF5E46 /* TheaterLocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2E58327216A8500AF5E46 /* TheaterLocationInfo.swift */; };
 		0BFAC24D271C63B500CE174A /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAC24C271C63B500CE174A /* SearchTableViewCell.swift */; };
 		0BFAC24F271C6C4800CE174A /* CastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAC24E271C6C4800CE174A /* CastViewController.swift */; };
 		0BFAC251271C6C6700CE174A /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAC250271C6C6700CE174A /* CastTableViewCell.swift */; };
@@ -48,6 +51,9 @@
 		0BA2E57927214AF600AF5E46 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		0BA2E57B27214BE100AF5E46 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BA2E57C27214BE100AF5E46 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
+		0BA2E57F27215E9A00AF5E46 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0BA2E581272169FF00AF5E46 /* TheaterLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterLocation.swift; sourceTree = "<group>"; };
+		0BA2E58327216A8500AF5E46 /* TheaterLocationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterLocationInfo.swift; sourceTree = "<group>"; };
 		0BFAC24C271C63B500CE174A /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		0BFAC24E271C6C4800CE174A /* CastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastViewController.swift; sourceTree = "<group>"; };
 		0BFAC250271C6C6700CE174A /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
@@ -91,6 +97,9 @@
 				0B0CAA7F271C45F7001080EC /* TvShowInfo.swift */,
 				0B0CAA7B271C3E72001080EC /* PaddedLabel.swift */,
 				0B0CAA6B271C16B7001080EC /* Main.storyboard */,
+				0BA2E57F27215E9A00AF5E46 /* MapViewController.swift */,
+				0BA2E581272169FF00AF5E46 /* TheaterLocation.swift */,
+				0BA2E58327216A8500AF5E46 /* TheaterLocationInfo.swift */,
 				0BA2E57B27214BE100AF5E46 /* BookCollectionViewCell.swift */,
 				0BA2E57C27214BE100AF5E46 /* BookCollectionViewCell.xib */,
 				0BA2E57927214AF600AF5E46 /* BookViewController.swift */,
@@ -186,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BA2E58427216A8500AF5E46 /* TheaterLocationInfo.swift in Sources */,
 				0BFAC24D271C63B500CE174A /* SearchTableViewCell.swift in Sources */,
 				0B0CAA7E271C453B001080EC /* TvShow.swift in Sources */,
 				0BA2E572271EE80D00AF5E46 /* overViewTableViewCell.swift in Sources */,
@@ -201,6 +211,8 @@
 				0B0CAA7C271C3E72001080EC /* PaddedLabel.swift in Sources */,
 				0B0CAA68271C16B7001080EC /* SceneDelegate.swift in Sources */,
 				0B0CAA80271C45F7001080EC /* TvShowInfo.swift in Sources */,
+				0BA2E58027215E9A00AF5E46 /* MapViewController.swift in Sources */,
+				0BA2E582272169FF00AF5E46 /* TheaterLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -254,7 +254,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NTm-Qz-TBU">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="list.dash" catalog="system" id="Wzd-SW-1qQ"/>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Item" image="list.dash" catalog="system" id="Wzd-SW-1qQ"/>
+                            <barButtonItem image="map" catalog="system" id="4ln-Fk-bsA">
+                                <connections>
+                                    <action selector="mapButtonClicked:" destination="BYZ-38-t0r" id="TbN-V4-MLG"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="magnifyingglass" catalog="system" id="VJe-r4-Zsh">
                             <connections>
                                 <action selector="searchBtnClicked:" destination="BYZ-38-t0r" id="EhG-1i-9qa"/>
@@ -331,6 +338,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0q-cj-o44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2673.8461538461538" y="782.70142180094786"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="wLL-tQ-3uM">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="osH-rO-VjV" customClass="MapViewController" customModule="TrendsMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fPV-wW-1c4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZiC-lw-CLu">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w9O-HQ-UqI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZiC-lw-CLu" firstAttribute="leading" secondItem="w9O-HQ-UqI" secondAttribute="leading" id="NmM-5v-CiH"/>
+                            <constraint firstItem="w9O-HQ-UqI" firstAttribute="bottom" secondItem="ZiC-lw-CLu" secondAttribute="bottom" id="d0c-XL-SQn"/>
+                            <constraint firstItem="w9O-HQ-UqI" firstAttribute="trailing" secondItem="ZiC-lw-CLu" secondAttribute="trailing" id="edh-tL-6cS"/>
+                            <constraint firstItem="ZiC-lw-CLu" firstAttribute="top" secondItem="w9O-HQ-UqI" secondAttribute="top" id="yck-BL-AmM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="ZiC-lw-CLu" id="2YE-HR-iKO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p0u-ho-ZYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3518" y="789"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="ECT-X5-4s6">
@@ -627,6 +663,7 @@
         <image name="hometown_cha_cha_cha" width="350" height="525"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="map" catalog="system" width="128" height="110"/>
         <image name="paperclip.circle.fill" catalog="system" width="128" height="121"/>
         <image name="paw_pastrol" width="350" height="525"/>
         <image name="squid_game" width="350" height="515"/>
