@@ -13,7 +13,7 @@ struct TvShow{
     let releaseDate: String
     let genre: String
     let region: String
-    let overview: String
+    var overview: String
     let rate: Float
     let starring: String
     let backdropImage: String

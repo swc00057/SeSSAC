@@ -19,6 +19,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         mediaTableView.delegate = self
         mediaTableView.dataSource = self
+        mediaTableView.separatorStyle = .none
         mainTitle.text = "SHIN DONG"
         mainTitle.textAlignment = .center
         mainTitle.textColor = .white
@@ -51,11 +52,32 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         cell.starringLabel.text = row.starring
         cell.rateLabel.text = "\(row.rate)"
         cell.posterView.image = UIImage(named: "\(row.posterImage)")
+        cell.webViewLinkButton.tag = indexPath.row
+        cell.webViewLinkButton.addTarget(self, action: #selector(webViewLinkButtonClicked), for: .touchUpInside)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UIScreen.main.bounds.height/2
+        return UIScreen.main.bounds.height/1.8
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = sb.instantiateViewController(withIdentifier: "CastViewController") as! CastViewController
+        vc.tvShow = tvshowInfo.tvShow[indexPath.row]
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @objc func webViewLinkButtonClicked(_ sender: UIButton){
+       
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = sb.instantiateViewController(withIdentifier: linkViewController.identifier) as! linkViewController
+        vc.tvshow = tvshowInfo.tvShow[sender.tag]
+        
+        let nav = UINavigationController(rootViewController: vc)
+        present(nav, animated: true, completion: nil)
     }
 
     @IBAction func searchBtnClicked(_ sender: UIBarButtonItem) {
@@ -67,18 +89,20 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
         
+        //vc.modalPresentationStyle = .fullScreen
+        
         present(nav, animated: true, completion: nil)
         
+        //present(vc, animated: true, completion: nil)
+        
     }
-    
-    @IBAction func castBtnClicked(_ sender: UIBarButtonItem) {
+    @IBAction func bookButtonClicked(_ sender: UIButton) {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         
-        let vc = sb.instantiateViewController(withIdentifier: "CastViewController") as! CastViewController
+        let vc = sb.instantiateViewController(withIdentifier: BookViewController.identifier) as! BookViewController
         
         navigationController?.pushViewController(vc, animated: true)
-        
     }
 }
 

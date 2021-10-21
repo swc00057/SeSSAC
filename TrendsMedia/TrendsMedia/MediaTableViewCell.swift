@@ -16,7 +16,7 @@ class MediaTableViewCell: UITableViewCell {
     @IBOutlet weak var starringLabel: UILabel!
     @IBOutlet weak var rateLabel: PaddedLabel!
     @IBOutlet weak var detailBtn: UIButton!
-    
+    @IBOutlet weak var webViewLinkButton: UIButton!
     static let identifier = "MediaTableViewCell"
 
     override func awakeFromNib() {
@@ -24,7 +24,8 @@ class MediaTableViewCell: UITableViewCell {
         detailBtn.setTitle("자세히 보기", for: .normal)
         genreLabel.font = .boldSystemFont(ofSize: 17)
         self.selectionStyle = .none
-        mediaCellView.layer.masksToBounds = false
+        posterView.layer.cornerRadius = 10
+        posterView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         mediaCellView.layer.cornerRadius = 10
         mediaCellView.layer.shadowColor = UIColor.black.cgColor
         mediaCellView.layer.shadowOffset = CGSize(width: 0, height: 4)
@@ -37,6 +38,11 @@ class MediaTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0))
     }
 
 }
