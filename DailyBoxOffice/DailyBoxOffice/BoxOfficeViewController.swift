@@ -11,48 +11,71 @@ import SwiftyJSON
 
 class BoxOfficeViewController: UIViewController {
 
-    //@IBOutlet weak var textField: UITextField!
+    var boxOfficeList: [BoxOffice] = []
+    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var boxOfficeTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         boxOfficeTableView.delegate = self
         boxOfficeTableView.dataSource = self
         boxOfficeTableView.backgroundColor = .clear
-        //textField.contentVerticalAlignment = .center
-        //textField.font = .systemFont(ofSize: 17)
         searchButton.backgroundColor = .white
         searchButton.setTitle("검색", for: .normal)
         let nibName = UINib(nibName: BoxOfficeTableViewCell.identifier, bundle: nil)
         boxOfficeTableView.register(nibName, forCellReuseIdentifier: BoxOfficeTableViewCell.identifier)
         fetchBoxOffice()
-        // Do any additional setup after loading the view.
     }
     
     func fetchBoxOffice(){
-        let date = "20211024"
+        var date: String
+        if searchTextField.text?.replacingOccurrences(of: " ", with: "") == ""{
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyyMMdd"
+            var now = Date()
+            now = now.addingTimeInterval(-86400)
+            date = formatter.string(from: now)
+            print(date)
+        }
+        else{
+            date = searchTextField.text!
+        }
+        
+        
         var API_KEY: String = ""
         if let key = Bundle.main.infoDictionary?["API_KEY"] as? String {
             API_KEY = key
         }
         let url = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(API_KEY)=\(date)"
-        print(url)
         
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
+                var list: [BoxOffice] = []
                 let json = JSON(value)
-                print("JSON: \(json)")
+                for item in json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue{
+                    let title = item["movieNm"].stringValue
+                    let rank = item["rank"].stringValue
+                    let releaseDate = item["openDt"].stringValue
+                    let movie = BoxOffice(title: title, rank: rank, releaseDate: releaseDate)
+                    list.append(movie)
+                }
+                self.boxOfficeList = list
+                self.boxOfficeTableView.reloadData()
             case .failure(let error):
                 print(error)
             }
         }
     }
+    @IBAction func searchButtonClicked(_ sender: UIButton) {
+        fetchBoxOffice()
+    }
 }
 extension BoxOfficeViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return boxOfficeList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,6 +89,9 @@ extension BoxOfficeViewController: UITableViewDelegate,UITableViewDataSource {
         cell.dateLabel.textColor = .white
         cell.numberLabel.backgroundColor = .white
         cell.numberLabel.font = .boldSystemFont(ofSize: 17)
+        cell.titleLabel.text = boxOfficeList[indexPath.row].title
+        cell.numberLabel.text = boxOfficeList[indexPath.row].rank
+        cell.dateLabel.text = boxOfficeList[indexPath.row].releaseDate
         return cell
     }
     

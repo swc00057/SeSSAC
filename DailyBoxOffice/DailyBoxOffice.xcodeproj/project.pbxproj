@@ -19,6 +19,7 @@
 		0BA2E603272807BE00AF5E46 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0BA2E602272807BE00AF5E46 /* Alamofire */; };
 		0BA2E606272807CE00AF5E46 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 0BA2E605272807CE00AF5E46 /* SwiftyJSON */; };
 		0BA2E60827280CCF00AF5E46 /* APIKEY.xconfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0BA2E60727280CCF00AF5E46 /* APIKEY.xconfig.xcconfig */; };
+		0BC0D68F27284AC4009223C1 /* BoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0D68E27284AC4009223C1 /* BoxOffice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0BA2E5FA2727F3D600AF5E46 /* BoxOfficeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeTableViewCell.swift; sourceTree = "<group>"; };
 		0BA2E5FB2727F3D600AF5E46 /* BoxOfficeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoxOfficeTableViewCell.xib; sourceTree = "<group>"; };
 		0BA2E60727280CCF00AF5E46 /* APIKEY.xconfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKEY.xconfig.xcconfig; sourceTree = "<group>"; };
+		0BC0D68E27284AC4009223C1 /* BoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				0BA2E5E32727EE8C00AF5E46 /* SceneDelegate.swift */,
 				0BA2E5E52727EE8C00AF5E46 /* ViewController.swift */,
 				0BA2E5E72727EE8C00AF5E46 /* Main.storyboard */,
+				0BC0D68E27284AC4009223C1 /* BoxOffice.swift */,
 				0BA2E5FA2727F3D600AF5E46 /* BoxOfficeTableViewCell.swift */,
 				0BA2E5FB2727F3D600AF5E46 /* BoxOfficeTableViewCell.xib */,
 				0BA2E5F52727EEBB00AF5E46 /* BoxOfficeViewController.swift */,
@@ -169,6 +172,7 @@
 				0BA2E5E62727EE8C00AF5E46 /* ViewController.swift in Sources */,
 				0BA2E5E22727EE8C00AF5E46 /* AppDelegate.swift in Sources */,
 				0BA2E5E42727EE8C00AF5E46 /* SceneDelegate.swift in Sources */,
+				0BC0D68F27284AC4009223C1 /* BoxOffice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
