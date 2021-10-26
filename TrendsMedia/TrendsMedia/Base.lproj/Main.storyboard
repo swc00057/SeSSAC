@@ -464,7 +464,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="vkr-Yl-I2I" id="Wls-2w-zBQ"/>
                         <outlet property="searchTableView" destination="ZMh-QV-OFI" id="jlh-A6-NXy"/>
+                        <outlet property="tableView" destination="ZMh-QV-OFI" id="gEV-5W-Mad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajJ-0w-kCu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

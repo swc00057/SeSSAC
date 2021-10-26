@@ -27,6 +27,9 @@
 		0BA2E58027215E9A00AF5E46 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2E57F27215E9A00AF5E46 /* MapViewController.swift */; };
 		0BA2E582272169FF00AF5E46 /* TheaterLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2E581272169FF00AF5E46 /* TheaterLocation.swift */; };
 		0BA2E58427216A8500AF5E46 /* TheaterLocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2E58327216A8500AF5E46 /* TheaterLocationInfo.swift */; };
+		0BA2E5CF27279D3700AF5E46 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 0BA2E5CE27279D3700AF5E46 /* SwiftyJSON */; };
+		0BA2E5D227279D4400AF5E46 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0BA2E5D127279D4400AF5E46 /* Alamofire */; };
+		0BA2E5D42727A84E00AF5E46 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2E5D32727A84E00AF5E46 /* MovieModel.swift */; };
 		0BFAC24D271C63B500CE174A /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAC24C271C63B500CE174A /* SearchTableViewCell.swift */; };
 		0BFAC24F271C6C4800CE174A /* CastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAC24E271C6C4800CE174A /* CastViewController.swift */; };
 		0BFAC251271C6C6700CE174A /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAC250271C6C6700CE174A /* CastTableViewCell.swift */; };
@@ -54,6 +57,7 @@
 		0BA2E57F27215E9A00AF5E46 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0BA2E581272169FF00AF5E46 /* TheaterLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterLocation.swift; sourceTree = "<group>"; };
 		0BA2E58327216A8500AF5E46 /* TheaterLocationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterLocationInfo.swift; sourceTree = "<group>"; };
+		0BA2E5D32727A84E00AF5E46 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		0BFAC24C271C63B500CE174A /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		0BFAC24E271C6C4800CE174A /* CastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastViewController.swift; sourceTree = "<group>"; };
 		0BFAC250271C6C6700CE174A /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BA2E5D227279D4400AF5E46 /* Alamofire in Frameworks */,
+				0BA2E5CF27279D3700AF5E46 /* SwiftyJSON in Frameworks */,
 				0BA2E56A271ECB2500AF5E46 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +115,7 @@
 				0BFAC24E271C6C4800CE174A /* CastViewController.swift */,
 				0BFAC24C271C63B500CE174A /* SearchTableViewCell.swift */,
 				0B322CC2271C5FFB00BC7A3B /* SearchViewController.swift */,
+				0BA2E5D32727A84E00AF5E46 /* MovieModel.swift */,
 				0B0CAA79271C1D69001080EC /* MediaTableViewCell.swift */,
 				0B0CAA6E271C16B8001080EC /* Assets.xcassets */,
 				0B0CAA70271C16B8001080EC /* LaunchScreen.storyboard */,
@@ -135,6 +142,8 @@
 			name = TrendsMedia;
 			packageProductDependencies = (
 				0BA2E569271ECB2500AF5E46 /* Kingfisher */,
+				0BA2E5CE27279D3700AF5E46 /* SwiftyJSON */,
+				0BA2E5D127279D4400AF5E46 /* Alamofire */,
 			);
 			productName = TrendsMedia;
 			productReference = 0B0CAA62271C16B7001080EC /* TrendsMedia.app */;
@@ -166,6 +175,8 @@
 			mainGroup = 0B0CAA59271C16B7001080EC;
 			packageReferences = (
 				0BA2E568271ECB2500AF5E46 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				0BA2E5CD27279D3700AF5E46 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				0BA2E5D027279D4400AF5E46 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 0B0CAA63271C16B7001080EC /* Products */;
 			projectDirPath = "";
@@ -203,6 +214,7 @@
 				0BA2E57A27214AF600AF5E46 /* BookViewController.swift in Sources */,
 				0B0CAA6A271C16B7001080EC /* ViewController.swift in Sources */,
 				0BFAC24F271C6C4800CE174A /* CastViewController.swift in Sources */,
+				0BA2E5D42727A84E00AF5E46 /* MovieModel.swift in Sources */,
 				0BA2E56C271EDD9F00AF5E46 /* linkViewController.swift in Sources */,
 				0B322CC3271C5FFB00BC7A3B /* SearchViewController.swift in Sources */,
 				0B0CAA66271C16B7001080EC /* AppDelegate.swift in Sources */,
@@ -444,6 +456,22 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		0BA2E5CD27279D3700AF5E46 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+		0BA2E5D027279D4400AF5E46 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -451,6 +479,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0BA2E568271ECB2500AF5E46 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		0BA2E5CE27279D3700AF5E46 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BA2E5CD27279D3700AF5E46 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		0BA2E5D127279D4400AF5E46 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BA2E5D027279D4400AF5E46 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
