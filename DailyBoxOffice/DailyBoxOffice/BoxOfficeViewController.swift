@@ -33,11 +33,24 @@ class BoxOfficeViewController: UIViewController {
         if searchTextField.text?.replacingOccurrences(of: " ", with: "") == ""{
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyyMMdd"
-            var now = Date()
-            now = now.addingTimeInterval(-86400)
-            date = formatter.string(from: now)
+//            var now = Date()
+//            now = now.addingTimeInterval(-86400)
+//            date = formatter.string(from: now)
+            
+            //1. 어제 날짜 구하기
+            let calendar = Calendar.current
+            let yesterday = calendar.date(byAdding: .day, value: -1, to: Date() )
+            date = formatter.string(from: yesterday!)
             print(date)
+            
+/*            //2. 이번주 월요일은?
+            var component = calendar.dateComponents([.weekOfYear, .yearForWeekOfYear, .weekday], from: Date())
+            component.weekday = 2
+            let mondayWeek = calendar.date(from: component)
+            print(mondayWeek)
+*/
         }
+        
         else{
             date = searchTextField.text!
         }
