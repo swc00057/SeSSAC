@@ -652,10 +652,10 @@
     </scenes>
     <designables>
         <designable name="0Wv-WJ-SF4">
-            <size key="intrinsicContentSize" width="24.333333333333332" height="17"/>
+            <size key="intrinsicContentSize" width="34.333333333333329" height="37"/>
         </designable>
         <designable name="it8-L0-95L">
-            <size key="intrinsicContentSize" width="20.666666666666668" height="17"/>
+            <size key="intrinsicContentSize" width="30.666666666666668" height="37"/>
         </designable>
     </designables>
     <resources>

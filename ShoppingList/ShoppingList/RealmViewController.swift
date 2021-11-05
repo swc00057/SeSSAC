@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import Zip
 
 class RealmViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,18 +17,18 @@ class RealmViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var addBtn: UIButton!
     let localRealm = try! Realm()
     var tasks: Results<ShoppingListModel>!
-//    var shoppingList = [ShoppingList]{
-//        didSet{
-//            //saveData()
-//        }
-//    }
+    //    var shoppingList = [ShoppingList]{
+    //        didSet{
+    //            //saveData()
+    //        }
+    //    }
     override func viewDidLoad() {
         super.viewDidLoad()
         titlaLabel.textAlignment = .center
         titlaLabel.text = "쇼핑"
         shoppingListTableView.delegate = self
         shoppingListTableView.dataSource = self
-//        shoppingListTableView.register(ShoppingListTableViewCell.self, forCellReuseIdentifier: "ShoppingListTableViewCell")
+        //        shoppingListTableView.register(ShoppingListTableViewCell.self, forCellReuseIdentifier: "ShoppingListTableViewCell")
         addTextField.placeholder = "무엇을 구매하실 건가요?"
         addTextField.backgroundColor = .systemGray6
         addBtn.setTitle("추가", for: .normal)
@@ -38,9 +39,10 @@ class RealmViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Do any additional setup after loading the view.
     }
     func saveData(){
-  
+        
     }
     func loadData(){
+        print("load")
         shoppingListTableView.reloadData()
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -80,7 +82,7 @@ class RealmViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.bookmarkImage.isUserInteractionEnabled = true
         cell.bookmarkImage.tag = indexPath.row
         
-            
+        
         return cell
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -135,7 +137,7 @@ class RealmViewController: UIViewController, UITableViewDelegate, UITableViewDat
         loadData()
     }
     
-
+    
     @IBAction func addBtnAction(_ sender: UIButton) {
         guard let text = addTextField.text else{return}
         
@@ -148,5 +150,51 @@ class RealmViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    @IBAction func backupRestoreButtonClicked(_ sender: UIButton) {
+        //액션시트를 열어 백업/복구 선택
+        showActionSheet(title: "백업&복구", message: "")
+    }
+    
 }
+
+extension RealmViewController: UIDocumentPickerDelegate {
+    
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        print(#function)
+    }
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        print(#function)
+        
+        //복구 - 2. 선택한 파일에 대한 경로 가져와야 함
+        guard let selectedFileURL = urls.first else { return }
+        
+        //도큐먼트 디렉토리 경로는 한번만 잡아주면 될 듯?
+        //FileManager.default.urls 랑 FileManager.
+        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let sandboxFileURL = documentDirectory.appendingPathComponent(selectedFileURL.lastPathComponent)
+        //설정된 변수 sandboxFileURL 는 쉽게말해 실행되는 앱의 도큐멘트 디렉토리이다
+        //lastPathComponent는 path의 맨 뒷부분을 말하는 것 같다. 여기서는 파일명+확장자가 된다
+        /*
+         따라서 도큐멘트픽커로 선택한 파일의 경로에서 파일명+확장자만 가져와서 사용중인 앱의 도큐멘트 디렉토리
+         경로 뒤에 붙여주어 url을 생성하는 작업을 진행하는 것. 터미널 등을 이용하여 cp를 하는 것과 유사하다
+         */
+        
+        do {
+            let fileURL = sandboxFileURL
+            
+            try Zip.unzipFile(fileURL, destination: documentDirectory, overwrite: true, password: nil, progress: { progress in
+                self.showAlert(title: "", message: "복구가 완료 되었습니다. 앱을 재시작 해주세요!")
+                //print("progress: \(progress)")
+                //복구가 완료 되었습니다 메시지, 얼럿.
+            }, fileOutputHandler: { unzippedFile in
+                //print("unzippedFile: \(unzippedFile)")
+            })
+            
+        } catch{
+            print("error")
+        }
+        
+    }
+}
+
 
